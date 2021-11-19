@@ -12,3 +12,7 @@ body{
     border: 5px solid black;
     display:flex;
 }
+
+@media screen and (min-width: 600px) {
+    
+}
