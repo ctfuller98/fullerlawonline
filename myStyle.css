@@ -1,0 +1,14 @@
+body{
+    background-color: whitesmoke;
+    color: rgb(43, 42, 42);
+}
+.flexContainer{
+    display:flex;
+    flex-direction: column;
+    grid-template-columns: auto auto auto;
+    border: black;
+}
+.subFlexContainer{
+    border: 5px solid black;
+    display:flex;
+}
