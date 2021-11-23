@@ -11,8 +11,14 @@ body{
 .subFlexContainer{
     border: 5px solid black;
     display:flex;
+    flex-direction: column;
 }
 
 @media screen and (min-width: 600px) {
-    
+    body{
+        background-color: blue;
+    }
+    .subFlexContainer{
+        flex-direction: row;
+    }
 }
