@@ -7,6 +7,19 @@ h1, h2, h3, h4 {
     font-family: 'Martel', serif;
 
 }
+h1 {
+    background-color: #ffbd4a;
+    padding: 10px;
+    color: black;
+}
+.hero {
+    padding: 10px;
+    border: 5px solid #1a2451;
+
+}
+.hero>img {
+    display:none;
+}
 .flexContainer{
     display:flex;
     flex-direction: column;
@@ -64,67 +77,64 @@ h1, h2, h3, h4 {
 .about>p {
     margin-top: 0;
 }
+.logo {
+    width:100%;
+}
 
 @media screen and (min-width: 600px) {
-.desktopview{
-    display: none;
-}
-.phone{
-    font-size: 30px;
-    color: #252525;
-    background-color: blanchedalmond;
-    position: fixed;
-    height: 50px;
-    width: 100%;
-    text-align: center;
-    margin-top: -10px;
-    margin-left:  -10px;
-    margin-right: -15px;
-    padding-top: 10px;
-}
-#nav{
-    list-style-type: none;
-}
-#mapIcon{
-    width: 10%;
-    height: auto;
-}
-.contact{
-    display: flex;
-}
-.contactForm{
-    display: flex;
-    flex-direction: column;
-}
-.address{
-    font-size: x-large;
-}
-.float-parent{
-    
-}
-.nav-bar{
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    background-color: rgb(18, 19, 97);
-    display: flex;
-    
-}
-.nav-bar a{
-    color: azure;
-    font-size: x-large;
-    padding: 20px
-}
-li{
-    float: left;
-}
-
-
-
-@media screen and (min-width: 600px) {
-    body{
-        background-color: rgb(205, 205, 243);
+    h1{
+        margin-right: 50%;
     }
+    .desktopview{
+        display: none;
+    }
+    .phone{
+        font-size: 30px;
+        color: #252525;
+        background-color: blanchedalmond;
+        position: fixed;
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        margin-top: -10px;
+        margin-left:  -10px;
+        margin-right: -15px;
+        padding-top: 10px;
+    }
+    #nav{
+        list-style-type: none;
+    }
+    #mapIcon{
+        width: 10%;
+        height: auto;
+    }
+    .contact{
+        display: flex;
+    }
+    .contactForm{
+        display: flex;
+        flex-direction: column;
+    }
+    .address{
+        font-size: x-large;
+    }
+    .nav-bar{
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        background-color:  #1a2451;
+        display: flex;
+        
+    }
+    .nav-bar a{
+        color: azure;
+        font-size: x-large;
+        padding: 20px
+    }
+    li{
+        float: left;
+    }
+    
     .subFlexContainer{
         flex-direction: row;  
         justify-content: center;
@@ -142,9 +152,8 @@ li{
     padding: 0;
     color: black;
     padding-left:15px;
-    margin-right: 25px;
-    
-}
+    margin-right: 25px;   
+    }
     .desktopview{
         display:inline;
         font-size: larger;
@@ -174,5 +183,22 @@ li{
     }
     .nav-bar{
         position:unset;
+    }
+    .hero {
+        display: grid;
+        grid-template-columns: auto auto;
+        border: none;
+        padding: 25px;
+    }
+    .hero>p{
+        padding: 10px;
+        border: 5px solid #1a2451;
+        margin: 25px;
+    }
+    .hero>img{
+        display:block;
+        width: 300px;
+        height: 300px;
+        grid-column: 1/2;
     }
 }
