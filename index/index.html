@@ -133,21 +133,26 @@
             <li>Zeolite LLC</li>
         </div>
         </section>
+        <h2>Contact Us</h2>
         <section class="contact">
-            <h2>Contact Us</h2>
+            
             <div class="info">
-                <p><img src="../assets/mapicon.svg" alt="map_icon"> 
+                <div class="address">
+                    <img id="mapIcon" src="../assets/mapicon.svg" alt="map_icon"> 
                     Fuller & Fuller, PLLC<br>
                     24 North State Street<br>
-                    Preston, ID 83263</p>
-                <p> Phone: (208) 852-2680
-                    Fax: (208) 852-2683</p>
-                <p><b> *Please be advised that sending us a message 
-                    through this website does not form an attorney-client relationship, 
-                    nor should you send us confidential or sensitive information through 
-                    this contact form.</b> </p>
+                    Preston, ID 83263
+                </div>
+                <div class="address">
+                    <img id="mapIcon" src="../assets/phone_icon.svg" alt="map_icon"> 
+                    Phone: (208) 852-2680 
+                </div>
+                <div class="address">
+                    <img id="mapIcon" src="../assets/printer_icon.svg" alt="map_icon"> 
+                    Fax: (208) 852-2683 
+                </div>    
             </div>
-            <form id="contact=form" method="POST" action="/contact">
+            <form class="contactForm" id="contact=form" method="POST" action="/contact">
                 <input type="text" name="subject" id="subject" placeholder="Subject">
                 <input type="email" name="email" id="email" placeholder="email">
                 <input type="text" name="name" id="name" placeholder="name">
@@ -155,6 +160,10 @@
                 <input type="submit" value="Submit">
             </form>
         </section>
+        <p><b> *Please be advised that sending us a message 
+                    through this website does not form an attorney-client relationship, 
+                    nor should you send us confidential or sensitive information through 
+                    this contact form.</b> </p>
     </main>
     <footer></footer>
 </body>

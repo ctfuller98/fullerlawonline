@@ -33,6 +33,40 @@ body{
 #nav{
     list-style-type: none;
 }
+#mapIcon{
+    width: 10%;
+    height: auto;
+}
+.contact{
+    display: flex;
+}
+.contactForm{
+    display: flex;
+    flex-direction: column;
+}
+.address{
+    font-size: x-large;
+}
+.float-parent{
+    
+}
+.nav-bar{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgb(18, 19, 97);
+    display: flex;
+    
+}
+.nav-bar a{
+    color: azure;
+    font-size: x-large;
+    padding: 20px
+}
+li{
+    float: left;
+}
+
 
 
 @media screen and (min-width: 600px) {
@@ -68,5 +102,8 @@ body{
       
     li a:hover {
         background-color: #111111;
+    }
+    .nav-bar{
+        position:unset;
     }
 }
