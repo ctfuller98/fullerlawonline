@@ -1,6 +1,10 @@
 body{
     background-color: whitesmoke;
     color: rgb(43, 42, 42);
+    font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3, h4 {
+    font-family: 'Martel', serif;
 }
 .flexContainer{
     display:flex;
@@ -9,9 +13,34 @@ body{
     border: black;
 }
 .subFlexContainer{
-    border: 5px solid black;
+    
     display:flex;
     flex-direction: column;
+}
+.bio {
+    margin: 0 auto;
+    background-color: #90caf9;
+    border-bottom: 5px solid black;
+}
+.bio>h3{
+    text-align: left;
+    padding-left: 20px;
+
+
+}
+.bio>img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.bio>p{
+    margin: 20px;
+    padding:10px;
+    background-color: white;
+    box-shadow: 4px 4px 10px black;
+
+    
 }
 
 @media screen and (min-width: 600px) {
