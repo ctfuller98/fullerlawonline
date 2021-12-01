@@ -11,6 +11,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Martel&display=swap" rel="stylesheet">
     <title>Fuller & Fuller, PLLC | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script> 
+    /*function moreOne() {
+        var dots = document.getElementById("dots1");
+        var moreText = document.getElementById("more1");
+        var btnText = document.getElementById("first");
+      
+        if (dots.style.display === "none") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "Read more";
+          moreText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "Read less";
+          moreText.style.display = "inline";
+        }
+    }*/
+      </script>
 </head>
 <body>
     <header>
@@ -36,47 +53,64 @@
                 <li>Login</li>
             </ul>
         </nav>
+        <h2>Attorneys</h2>
         <section class="attorneys subFlexContainer">
-            <h2>Attorneys</h2>
+            
             <div class="bio">
-                
                 <img src="../assets/Steve.jpg" alt="Steven Fuller" loading="lazy">
                 <h3>Steven R. Fuller</h3>
-                <p>
-                A Cache Valley native, Steve has practiced law in Cache Valley since his graduation from the J. 
-                Reuben Clark Law School at Brigham Young University in 1982. His diverse practice includes civil trial practice, workers compensation defense, trusts and estates, 
-                business formation, local government, and land use issues. Steve serves as city attorney for a number of cities in Franklin County, and has served as a 
-                deputy attorney for Franklin County.<br>
-                Steve received his B.A. from Utah State University in 1979, graduating cum laude.  He and his wife, Myrna, are the proud parents of 5 children and 13 grandchildren.
-                </p>
+                <div class="about">
+                    <p>
+                        A Cache Valley native, Steve has practiced law in Cache Valley since his graduation from the J. 
+                        Reuben Clark Law School at Brigham Young University in 1982. Steve also received his B.A. from Utah State University in 1979, graduating cum laude.<br><br>
+                        His diverse practice includes civil trial practice, workers compensation defense, trusts and estates, 
+                        business formation, local government, and land use issues. Steve serves as city attorney for a number of cities in Franklin County, and has served as a 
+                        deputy attorney for Franklin County.<span id="dots1">...</span>
+                        <span id="more1">
+                            <br><br>He and his wife, Myrna, are the proud parents of 5 children and 13 grandchildren.
+                        </span>
+                        </p>
+                       <!--<button onclick="moree()" id="first">Read more</button>-->
+                </div>
+                
             </div>
             <div class="bio">
-                <h3>Lyle J. Fuller</h3>
+                
                 <img src="../assets/LyleBig.jpg" alt="Lyle Fuller" loading="lazy">
-                <p>
+                <h3>Lyle J. Fuller</h3>
+                <div class="about">
                     Lyle’s practice focuses on civil litigation, workers compensation defense, non-compete agreements and trade secrets, family law, and personal injury.  
                     He is an accomplished trial attorney who brings significant experience to all phases of the litigation process. 
-                    <br>
                     <h4>Experience</h4>
-                    Lyle began his career as an associate 
-                    in the litigation group of Spencer Fane, a large firm in Kansas City, Missouri.  Immediately prior to joining Fuller & Fuller, PLLC, he was a partner 
-                    and member of the executive committee in the Salt Lake City law firm of Smith Hartvigsen.  Utah Business Magazine honored him as one of Utah’s Legal Elite 
-                    in business litigation in 2008, 2009, and 2010, and Lyle was named a “Rising Star” by Mountain States Super Lawyers.  His article Keep Your Edge:  Non-compete 
-                    Agreements Protect Business Assets appeared in the August 2009 issue of Utah Business Magazine.
-
-                    <br>
+                    <p>
+                        Lyle began his career as an associate 
+                        in the litigation group of Spencer Fane, a large firm in Kansas City, Missouri.  Immediately prior to joining Fuller & Fuller, PLLC, he was a partner 
+                        and member of the executive committee in the Salt Lake City law firm of Smith <span class="dots">...</span>
+                    <span class="more">
+                        Hartvigsen.  Utah Business Magazine honored him as one of Utah’s Legal Elite 
+                        in business litigation in 2008, 2009, and 2010, and Lyle was named a “Rising Star” by Mountain States Super Lawyers.  His article Keep Your Edge:  Non-compete 
+                        Agreements Protect Business Assets appeared in the August 2009 issue of Utah Business Magazine.
+                    </p>
                     <h4>Education</h4>
-                    Lyle received his B.A. in History, magna cum laude, from Brigham Young University in 1997, and his law degree from Duke University in 2000, where he served as 
-                    a research editor for the Duke Journal of Comparative and International Law.  In addition to being licensed in Idaho and Utah, he is also licensed (on voluntary inactive status) in Missouri and Kansas.  
-                    <br>
+                    <p>
+                      Lyle received his B.A. in History, magna cum laude, from Brigham Young University in 1997, and his law degree from Duke University in 2000, where he served as 
+                     a research editor for the Duke Journal of Comparative and International Law.  In addition to being licensed in Idaho and Utah, he is also licensed (on voluntary inactive status) in Missouri and Kansas.  
+                    </p>
                     <h4>Hobbies</h4>
-                    When not practicing law, Lyle enjoys the outdoors, playing sports, watching Duke basketball, and spending time with his wife and four children.  He is also active in the community, serving on the board of the 
-                    Oneida Stake Academy Foundation, and has served on the board of the Preston chapter of Kiwannis International.
-                </p>
+                    <p>
+                    When not practicing law, Lyle enjoys the outdoors, playing sports, 
+                    watching Duke basketball, and spending time with his wife and four children. 
+                    He is also active in the community, having served on the board of the 
+                    Oneida Stake Academy Foundation, and the 
+                    Preston chapter of Kiwannis International.
+                    </p>
+                    </span>
+                    <!--<button onclick="moreTwo()" id="second">Read more</button>-->   
+                </div>     
             </div>
             <div class="bio">
+                <img src="../assets/standin.jpg" alt="Preston Rudder" loading="lazy">
                 <h3>Preston Rudder</h3>
-                <img src="../assets/Lyle.jpg" alt="Lyle Fuller" loading="lazy">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis vestibulum tellus, eu consectetur leo porttitor ac. Donec pulvinar quam a urna fermentum cursus.
                    Donec lectus turpis, malesuada eget viverra in, sollicitudin et nunc. Praesent semper eget massa at vestibulum. In nulla justo, fermentum quis turpis non, luctus porta arcu.
                    Mauris sit amet lorem iaculis odio blandit suscipit. Vivamus eu metus eget turpis scelerisque aliquam et ut augue. In egestas tincidunt justo, sit amet fringilla quam condimentum nec.
