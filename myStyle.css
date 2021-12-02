@@ -1,7 +1,25 @@
 body{
     background-color: whitesmoke;
     color: rgb(43, 42, 42);
+    font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3, h4 {
+    font-family: 'Martel', serif;
 
+}
+
+h1 {
+    background-color: #ffbd4a;
+    padding: 10px;
+    color: black;
+}
+.hero {
+    padding: 10px;
+    border: 5px solid #1a2451;
+
+}
+.hero>img {
+    display:none;
 }
 .flexContainer{
     display:flex;
@@ -10,71 +28,134 @@ body{
     border: black;
 }
 .subFlexContainer{
-    border: 5px solid black;
+    
     display:flex;
     flex-direction: column;
 }
-.desktopview{
-    display: none;
+.bio {
+    margin: 0 auto;
+    background-color: #1a2451;
+    border-bottom: 5px solid black;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto;
 }
-.phone{
-    font-size: 30px;
-    color: #252525;
-    background-color: blanchedalmond;
-    position: fixed;
-    height: 50px;
+.more {display: none;}
+.dots {display: inline;}
+
+.bio>h3{
+    text-align: left;
+    background-color: #ffbd4a;
+    padding: 20px;
+    color: black;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    font-size: 2rem;
+}
+.bio>img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
-    text-align: center;
-    margin-top: -10px;
-    margin-left:  -10px;
-    margin-right: -15px;
-    padding-top: 10px;
+    grid-row: 1/3;
+    grid-column: 1/3;
 }
-#nav{
-    list-style-type: none;
+.bio>p{
+    margin: 20px;
+    padding:10px;
+    background-color: white;
 }
-#mapIcon{
-    width: 10%;
-    height: auto;
+.about {
+    margin: 20px;
+    padding:10px;
+    background-color: white;
+    grid-row:3/4;
 }
-.contact{
-    display: flex;
+.about>h4 {
+    margin-bottom: 5px;
 }
-.contactForm{
-    display: flex;
-    flex-direction: column;
+.about>p {
+    margin-top: 0;
 }
-.address{
-    font-size: x-large;
+.logo {
+    width:100%;
 }
-.float-parent{
-    
+.fakeh4{
+    font-family: 'Martel', serif;
+    font-weight: bold;
 }
-.nav-bar{
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    background-color: rgb(18, 19, 97);
-    display: flex;
-    
-}
-.nav-bar a{
-    color: azure;
-    font-size: x-large;
-    padding: 20px
-}
-li{
-    float: left;
-}
-
-
-
 @media screen and (min-width: 600px) {
-    body{
-        background-color: rgb(205, 205, 243);
+    h1{
+        margin-right: 50%;
     }
+    .desktopview{
+        display: none;
+    }
+    .phone{
+        font-size: 30px;
+        color: #252525;
+        background-color: blanchedalmond;
+        position: fixed;
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        margin-top: -10px;
+        margin-left:  -10px;
+        margin-right: -15px;
+        padding-top: 10px;
+    }
+    #nav{
+        list-style-type: none;
+    }
+    #mapIcon{
+        width: 10%;
+        height: auto;
+    }
+    .contact{
+        display: flex;
+    }
+    .contactForm{
+        display: flex;
+        flex-direction: column;
+    }
+    .address{
+        font-size: x-large;
+    }
+    .nav-bar{
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        background-color:  #1a2451;
+        display: flex;
+        
+    }
+    .nav-bar a{
+        color: azure;
+        font-size: x-large;
+        padding: 20px
+    }
+    li{
+        float: left;
+    }
+    
     .subFlexContainer{
-        flex-direction: row;
+        flex-direction: row;  
+        justify-content: center;
+    }
+    .bio {
+        max-width: 30%;
+        display:block;
+    }
+    .bio>img {
+        margin-top:25px;
+        width:240px;
+        height: 300px;
+    }
+    .bio>h3 {
+    padding: 0;
+    color: black;
+    padding-left:15px;
+    margin-right: 25px;   
     }
     .desktopview{
         display:inline;
@@ -105,5 +186,22 @@ li{
     }
     .nav-bar{
         position:unset;
+    }
+    .hero {
+        display: grid;
+        grid-template-columns: auto auto;
+        border: none;
+        padding: 25px;
+    }
+    .hero>p{
+        padding: 10px;
+        border: 5px solid #1a2451;
+        margin: 25px;
+    }
+    .hero>img{
+        display:block;
+        width: 300px;
+        height: 300px;
+        grid-column: 1/2;
     }
 }

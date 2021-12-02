@@ -5,71 +5,126 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href="../myStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Martel&display=swap" rel="stylesheet">
     <script src="../js/main.js" type = "module"></script>
     <title>Fuller & Fuller, PLLC | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script> 
+
+function readMore(attorney) {
+    let dots = document.querySelector(`.bio[data-attorney="${attorney}"] .dots`);
+    let moreText = document.querySelector(`.bio[data-attorney="${attorney}"] .more`); 
+    let btnText = document.querySelector(`.bio[data-attorney="${attorney}"] .myBtn`);
+
+    if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.textContent = "Read more";
+        moreText.style.display = "none";
+    } else {
+        dots.style.display = "none";
+        btnText.textContent = "Read less"; 
+        moreText.style.display = "inline";
+    }
+}
+      </script>
 </head>
 <body>
     <header class = "header"></header>
     <main class="flexContainer">
         <div class="hero gridElement">
+            <img src="../assets/herosmall.jpg" alt="gavel" loading="lazy">
             <p>
             Fuller & Fuller, PLLC is a law firm based in Preston, Idaho.  With attorneys licensed in Idaho and Utah, 
             we are pleased to serve clients in Preston and Cache Valley, and throughout Southeast Idaho, including and Franklin, Oneida, Caribou, 
             Bear Lake, and Bannock counties in Idaho. 
             Drawing upon our decades of combined experience, we advance our clients’ interests with skill, vigor, and integrity while upholding the highest standards of ethics and professionalism.
-            We appreciate your interest in our law firm, and invite you to contact us should you need legal assistance.
+            We appreciate your interest in our law firm, and invite you to <a href="#contact">contact us</a> should you need legal assistance.
             </p>
         </div>
-       
+        <h1 id="attorneys">Attorneys</h1>
         <section class="attorneys subFlexContainer">
-            <h2>Attorneys</h2>
-            <div class="bio">
-                <h3>Steven R. Fuller</h3>
+            
+            <div class="bio" data-attorney="Steven">
                 <img src="../assets/Steve.jpg" alt="Steven Fuller" loading="lazy">
-                <p>
-                A Cache Valley native, Steve has practiced law in Cache Valley since his graduation from the J. 
-                Reuben Clark Law School at Brigham Young University in 1982. His diverse practice includes civil trial practice, workers compensation defense, trusts and estates, 
-                business formation, local government, and land use issues. Steve serves as city attorney for a number of cities in Franklin County, and has served as a 
-                deputy attorney for Franklin County.<br>
-                Steve received his B.A. from Utah State University in 1979, graduating cum laude.  He and his wife, Myrna, are the proud parents of 5 children and 13 grandchildren.
-                </p>
+                <h3>Steven R. Fuller</h3>
+                <div class="about">
+                    <p>
+                        A Cache Valley native, Steve has practiced law in Cache Valley since his graduation from the J. 
+                        Reuben Clark Law School at Brigham Young University in 1982. Steve also received his B.A. from Utah State University in 1979, graduating cum laude.<br><br>
+                        His diverse practice includes civil trial practice, workers compensation defense, trusts and estates, 
+                        business formation, local government, and land use issues. Steve serves as city attorney for a number of cities in Franklin County, and has served as a 
+                        deputy attorney for Franklin County.<span class="dots">...</span>
+                        <span class="more">
+                            <br><br>He and his wife, Myrna, are the proud parents of 5 children and 13 grandchildren.
+                        </span>
+                        </p>
+                       <button onclick="readMore('Steven')" class="myBtn">Read more</button>
+                </div>
+                
             </div>
-            <div class="bio">
+            <div class="bio" data-attorney="Lyle">
+                <img src="../assets/LyleBig.jpg" alt="Lyle Fuller" loading="lazy">
                 <h3>Lyle J. Fuller</h3>
-                <img src="../assets/Lyle.jpg" alt="Lyle Fuller" loading="lazy">
-                <p>
+                <div class="about">
                     Lyle’s practice focuses on civil litigation, workers compensation defense, non-compete agreements and trade secrets, family law, and personal injury.  
-                    He is an accomplished trial attorney who brings significant experience to all phases of the litigation process.  Lyle began his career as an associate 
-                    in the litigation group of Spencer Fane, a large firm in Kansas City, Missouri.  Immediately prior to joining Fuller & Fuller, PLLC, he was a partner 
-                    and member of the executive committee in the Salt Lake City law firm of Smith Hartvigsen.  Utah Business Magazine honored him as one of Utah’s Legal Elite 
-                    in business litigation in 2008, 2009, and 2010, and Lyle was named a “Rising Star” by Mountain States Super Lawyers.  His article Keep Your Edge:  Non-compete 
-                    Agreements Protect Business Assets appeared in the August 2009 issue of Utah Business Magazine.
-
-                    <br>Lyle received his B.A. in History, magna cum laude, from Brigham Young University in 1997, and his law degree from Duke University in 2000, where he served as 
-                    a research editor for the Duke Journal of Comparative and International Law.  In addition to being licensed in Idaho and Utah, he is also licensed (on voluntary inactive status) in Missouri and Kansas.  
-                    When not practicing law, Lyle enjoys the outdoors, playing sports, watching Duke basketball, and spending time with his wife and four children.  He is also active in the community, serving on the board of the 
-                    Oneida Stake Academy Foundation, and has served on the board of the Preston chapter of Kiwannis International.
-                </p>
+                    He is an accomplished trial attorney who brings significant experience to all phases of the litigation process. 
+                    <h4>Experience</h4>
+                    <p>
+                        Lyle began his career as an associate 
+                        in the litigation group of Spencer Fane, a large firm in Kansas City, Missouri.  Immediately prior to joining Fuller & Fuller, PLLC, he was a partner 
+                        and member of the executive committee in the Salt Lake City law firm of Smith <span class="dots">...</span>
+                    <div class="more">
+                        Hartvigsen.  Utah Business Magazine honored him as one of Utah’s Legal Elite 
+                        in business litigation in 2008, 2009, and 2010, and Lyle was named a “Rising Star” by Mountain States Super Lawyers.  His article Keep Your Edge:  Non-compete 
+                        Agreements Protect Business Assets appeared in the August 2009 issue of Utah Business Magazine.
+                    </p>
+                    <h4>Education</h4>
+                    <p>
+                      Lyle received his B.A. in History, magna cum laude, from Brigham Young University in 1997, and his law degree from Duke University in 2000, where he served as 
+                     a research editor for the Duke Journal of Comparative and International Law.  In addition to being licensed in Idaho and Utah, he is also licensed (on voluntary inactive status) in Missouri and Kansas.  
+                    </p>
+                    <h4>Hobbies</h4>
+                    <p>
+                    When not practicing law, Lyle enjoys the outdoors, playing sports, 
+                    watching Duke basketball, and spending time with his wife and four children. 
+                    He is also active in the community, having served on the board of the 
+                    Oneida Stake Academy Foundation, and the 
+                    Preston chapter of Kiwannis International.
+                    </p>
+                </div>
+                    <button onclick="readMore('Lyle')" class="myBtn">Read more</button>   
+                </div>     
             </div>
-            <div class="bio">
+            <div class="bio" data-attorney="Preston">
+                <img src="../assets/standin.jpg" alt="Preston Rudder" loading="lazy">
                 <h3>Preston Rudder</h3>
-                <img src="../assets/Lyle.jpg" alt="Lyle Fuller" loading="lazy">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis vestibulum tellus, eu consectetur leo porttitor ac. Donec pulvinar quam a urna fermentum cursus.
-                   Donec lectus turpis, malesuada eget viverra in, sollicitudin et nunc. Praesent semper eget massa at vestibulum. In nulla justo, fermentum quis turpis non, luctus porta arcu.
-                   Mauris sit amet lorem iaculis odio blandit suscipit. Vivamus eu metus eget turpis scelerisque aliquam et ut augue. In egestas tincidunt justo, sit amet fringilla quam condimentum nec.
-                   Sed sed nisi quis quam lacinia ullamcorper. Phasellus sodales justo non nisi dignissim placerat. Morbi a ornare erat, ut varius eros. Nullam et euismod nulla, ac dignissim diam. 
-                   Maecenas metus nulla, facilisis nec metus sed, viverra volutpat erat. Suspendisse potenti. Aliquam vehicula vel libero suscipit consectetur.
-                   Praesent ut nibh iaculis, semper ligula ac, tempor velit. Donec eros libero, aliquet sed velit sit amet, finibus ultricies mauris. Pellentesque ultricies cursus dignissim. Maecenas 
-                   bibendum lacus ut enim tempus, in sodales mi vestibulum. Duis auctor ante et erat euismod, id ultricies odio egestas. Sed pharetra urna nec dolor tristique sodales. Pellentesque dapibus
-                    eros non odio imperdiet, eget blandit tellus aliquam. Donec tempor tortor nec purus commodo sollicitudin in rutrum odio. Nunc bibendum orci in cursus porta. Curabitur maximus dapibus placerat. 
-                    Suspendisse laoreet, sem at egestas imperdiet, ex libero dignissim ligula, non porta metus nibh in ex. Maecenas facilisis blandit feugiat.
+                <p>Braden was born and raised in Davis County, Utah, and considers it home. 
+                    He, however, calls Eastern Idaho a close second, seeing his family relocated
+                    to Rigby, Idaho while he was in High School. Braden was born and raised in Davis County, Utah, and considers it home. 
+                    He, however, calls Eastern Idaho a close second, seeing his family relocated
+                    to Rigby, Idaho while he was in High School. Braden was born and raised in Davis County, Utah, and considers it home. 
+                    He, however, calls Eastern Idaho a close second, seeing his family relocated
+                    to Rigby, Idaho while he was in High School. Braden was born and raised in Davis County, Utah, and considers it home. 
+                    He, however, calls Eastern Idaho a close second<span class="dots" >...</span>
+                    <span class="more">
+                    He currently resides in Logan with
+                    his wife and two small boys. To Braden, there are few things more serene than
+                    grabbing either his mountain or road bike and going for a long ride through the
+                    countryside. At the same time, he relishes the competition of bike racing and 
+                    professional cycling. When the weather is not so favorable, he also enjoys 
+                    racquetball, skiing, and auto mechanics. </span>
+                    <button onclick="readMore('Preston')" class="myBtn">Read more</button> 
                 </p>
+               
+                
             </div>
         </section>
         <section class="areas subFlexContainer">
             <div>
-                <h2>Practice Areas</h2>
+                <h2 id="practice">Practice Areas</h2>
                 <p>While this is not intended to be a complete list of each type of matter we handle, we are pleased to assist clients in the following general areas:
                     <ul>
                         <li>Litigation (including trials, mediation/arbitration, and appeals)</li>
@@ -133,7 +188,7 @@
             <li>Zeolite LLC</li>
         </div>
         </section>
-        <h2>Contact Us</h2>
+        <h2 id="contact">Contact Us</h2>
         <section class="contact">
             
             <div class="info">
