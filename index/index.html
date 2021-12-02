@@ -13,21 +13,22 @@
     <title>Fuller & Fuller, PLLC | Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script> 
-    /*function moreOne() {
-        var dots = document.getElementById("dots1");
-        var moreText = document.getElementById("more1");
-        var btnText = document.getElementById("first");
-      
-        if (dots.style.display === "none") {
-          dots.style.display = "inline";
-          btnText.innerHTML = "Read more";
-          moreText.style.display = "none";
-        } else {
-          dots.style.display = "none";
-          btnText.innerHTML = "Read less";
-          moreText.style.display = "inline";
-        }
-    }*/
+
+function readMore(attorney) {
+    let dots = document.querySelector(`.bio[data-attorney="${attorney}"] .dots`);
+    let moreText = document.querySelector(`.bio[data-attorney="${attorney}"] .more`); 
+    let btnText = document.querySelector(`.bio[data-attorney="${attorney}"] .myBtn`);
+
+    if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.textContent = "Read more";
+        moreText.style.display = "none";
+    } else {
+        dots.style.display = "none";
+        btnText.textContent = "Read less"; 
+        moreText.style.display = "inline";
+    }
+}
       </script>
 </head>
 <body>
@@ -46,7 +47,7 @@
         <h1 id="attorneys">Attorneys</h1>
         <section class="attorneys subFlexContainer">
             
-            <div class="bio">
+            <div class="bio" data-attorney="Steven">
                 <img src="../assets/Steve.jpg" alt="Steven Fuller" loading="lazy">
                 <h3>Steven R. Fuller</h3>
                 <div class="about">
@@ -55,16 +56,16 @@
                         Reuben Clark Law School at Brigham Young University in 1982. Steve also received his B.A. from Utah State University in 1979, graduating cum laude.<br><br>
                         His diverse practice includes civil trial practice, workers compensation defense, trusts and estates, 
                         business formation, local government, and land use issues. Steve serves as city attorney for a number of cities in Franklin County, and has served as a 
-                        deputy attorney for Franklin County.<span id="dots1">...</span>
-                        <span id="more1">
+                        deputy attorney for Franklin County.<span class="dots">...</span>
+                        <span class="more">
                             <br><br>He and his wife, Myrna, are the proud parents of 5 children and 13 grandchildren.
                         </span>
                         </p>
-                       <!--<button onclick="moree()" id="first">Read more</button>-->
+                       <button onclick="readMore('Steven')" class="myBtn">Read more</button>
                 </div>
                 
             </div>
-            <div class="bio">
+            <div class="bio" data-attorney="Lyle">
                 <img src="../assets/LyleBig.jpg" alt="Lyle Fuller" loading="lazy">
                 <h3>Lyle J. Fuller</h3>
                 <div class="about">
@@ -75,7 +76,7 @@
                         Lyle began his career as an associate 
                         in the litigation group of Spencer Fane, a large firm in Kansas City, Missouri.  Immediately prior to joining Fuller & Fuller, PLLC, he was a partner 
                         and member of the executive committee in the Salt Lake City law firm of Smith <span class="dots">...</span>
-                    <span class="more">
+                    <div class="more">
                         Hartvigsen.  Utah Business Magazine honored him as one of Utah’s Legal Elite 
                         in business litigation in 2008, 2009, and 2010, and Lyle was named a “Rising Star” by Mountain States Super Lawyers.  His article Keep Your Edge:  Non-compete 
                         Agreements Protect Business Assets appeared in the August 2009 issue of Utah Business Magazine.
@@ -93,23 +94,32 @@
                     Oneida Stake Academy Foundation, and the 
                     Preston chapter of Kiwannis International.
                     </p>
-                    </span>
-                    <!--<button onclick="moreTwo()" id="second">Read more</button>-->   
+                </div>
+                    <button onclick="readMore('Lyle')" class="myBtn">Read more</button>   
                 </div>     
             </div>
-            <div class="bio">
+            <div class="bio" data-attorney="Preston">
                 <img src="../assets/standin.jpg" alt="Preston Rudder" loading="lazy">
                 <h3>Preston Rudder</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis vestibulum tellus, eu consectetur leo porttitor ac. Donec pulvinar quam a urna fermentum cursus.
-                   Donec lectus turpis, malesuada eget viverra in, sollicitudin et nunc. Praesent semper eget massa at vestibulum. In nulla justo, fermentum quis turpis non, luctus porta arcu.
-                   Mauris sit amet lorem iaculis odio blandit suscipit. Vivamus eu metus eget turpis scelerisque aliquam et ut augue. In egestas tincidunt justo, sit amet fringilla quam condimentum nec.
-                   Sed sed nisi quis quam lacinia ullamcorper. Phasellus sodales justo non nisi dignissim placerat. Morbi a ornare erat, ut varius eros. Nullam et euismod nulla, ac dignissim diam. 
-                   Maecenas metus nulla, facilisis nec metus sed, viverra volutpat erat. Suspendisse potenti. Aliquam vehicula vel libero suscipit consectetur.
-                   Praesent ut nibh iaculis, semper ligula ac, tempor velit. Donec eros libero, aliquet sed velit sit amet, finibus ultricies mauris. Pellentesque ultricies cursus dignissim. Maecenas 
-                   bibendum lacus ut enim tempus, in sodales mi vestibulum. Duis auctor ante et erat euismod, id ultricies odio egestas. Sed pharetra urna nec dolor tristique sodales. Pellentesque dapibus
-                    eros non odio imperdiet, eget blandit tellus aliquam. Donec tempor tortor nec purus commodo sollicitudin in rutrum odio. Nunc bibendum orci in cursus porta. Curabitur maximus dapibus placerat. 
-                    Suspendisse laoreet, sem at egestas imperdiet, ex libero dignissim ligula, non porta metus nibh in ex. Maecenas facilisis blandit feugiat.
+                <p>Braden was born and raised in Davis County, Utah, and considers it home. 
+                    He, however, calls Eastern Idaho a close second, seeing his family relocated
+                    to Rigby, Idaho while he was in High School. Braden was born and raised in Davis County, Utah, and considers it home. 
+                    He, however, calls Eastern Idaho a close second, seeing his family relocated
+                    to Rigby, Idaho while he was in High School. Braden was born and raised in Davis County, Utah, and considers it home. 
+                    He, however, calls Eastern Idaho a close second, seeing his family relocated
+                    to Rigby, Idaho while he was in High School. Braden was born and raised in Davis County, Utah, and considers it home. 
+                    He, however, calls Eastern Idaho a close second<span class="dots" >...</span>
+                    <span class="more">
+                    He currently resides in Logan with
+                    his wife and two small boys. To Braden, there are few things more serene than
+                    grabbing either his mountain or road bike and going for a long ride through the
+                    countryside. At the same time, he relishes the competition of bike racing and 
+                    professional cycling. When the weather is not so favorable, he also enjoys 
+                    racquetball, skiing, and auto mechanics. </span>
+                    <button onclick="readMore('Preston')" class="myBtn">Read more</button> 
                 </p>
+               
+                
             </div>
         </section>
         <section class="areas subFlexContainer">
