@@ -7,6 +7,7 @@ h1, h2, h3, h4 {
     font-family: 'Martel', serif;
 
 }
+
 h1 {
     background-color: #ffbd4a;
     padding: 10px;
@@ -39,10 +40,9 @@ h1 {
     grid-template-rows: auto auto auto auto;
     grid-template-columns: auto auto;
 }
-#more1 {display: none;}
-#more2 {
-    display:none;
-}
+.more {display: none;}
+.dots {display: inline;}
+
 .bio>h3{
     text-align: left;
     background-color: #ffbd4a;
@@ -80,7 +80,10 @@ h1 {
 .logo {
     width:100%;
 }
-
+.fakeh4{
+    font-family: 'Martel', serif;
+    font-weight: bold;
+}
 @media screen and (min-width: 600px) {
     h1{
         margin-right: 50%;
