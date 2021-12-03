@@ -7,6 +7,9 @@ h1, h2, h3, h4 {
     font-family: 'Martel', serif;
 
 }
+p {
+    line-height: 25px;
+}
 
 h1 {
     background-color: #ffbd4a;
@@ -39,6 +42,9 @@ h1 {
     display: grid;
     grid-template-rows: auto auto auto auto;
     grid-template-columns: auto auto;
+}
+.info>img{
+    width:50%;
 }
 .more {display: none;}
 .dots {display: inline;}
@@ -103,6 +109,7 @@ h1 {
         margin-left:  -10px;
         margin-right: -15px;
         padding-top: 10px;
+        z-index: 30;
     }
     #nav{
         list-style-type: none;
@@ -171,8 +178,9 @@ h1 {
     .info>p{
         grid-column: 1/2;
         grid-row: 1;
-        background-color: #1a24;
-        opacity: 0.5;
+        background-color: #1a2451;
+        height: 300px;
+        color: white;
         display:block;
         z-index: 20;
     }
