@@ -1,0 +1,16 @@
+{
+    "Users":[
+        {
+            "email": "qwert@gmail.com",
+            "password": "qwert",
+            "admin": false,
+            "Id": 1
+        },
+        {
+            "email": "bob@gmail.com",
+            "password": "bob",
+            "admin": false,
+            "Id": 2
+        }
+    ]
+}
