@@ -2,8 +2,6 @@ import { loadHeaderFooter } from "./utils.js";
 
 loadHeaderFooter();
 
-console.log("main should exsits")
-
 function readMore(attorney) {
     let dots = document.querySelector(`.card[data-attorney="${attorney}"] .dots`);
     let moreText = document.querySelector(`.card[data-attorney="${attorney}"] .more`); 

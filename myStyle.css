@@ -86,9 +86,9 @@ h1 {
 .logo {
     width:100%;
 }
-.fakeh4{
-    font-family: 'Martel', serif;
-    font-weight: bold;
+.container{
+    margin: auto;
+    padding: auto;
 }
 @media screen and (min-width: 600px) {
     h1{
