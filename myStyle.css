@@ -124,6 +124,7 @@ h1 {
     }
     .contact{
         display: flex;
+        flex-direction: row;
     }
     .contactForm{
         display: flex;
@@ -136,12 +137,13 @@ h1 {
         position: fixed;
         bottom: 0px;
         width: 100%;
-        background-color:  #1a2451;
+        color: black;
         display: flex;
+        
         
     }
     .nav-bar a{
-        color: azure;
+        color: black;
         font-size: x-large;
         padding: 20px
     }
@@ -196,7 +198,6 @@ h1 {
         font-size: larger;
     }
     .float-parent{
-        background-color: rgb(6, 4, 139);
         display: flex;
         padding-top: 50px;
     }
